@@ -1,0 +1,104 @@
+.app-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+  }
+  
+  .header {
+    text-align: center;
+    font-size: 100px;
+    font-weight: 50;
+    color: #ECDFDE;
+  }
+  
+  .addItem{
+    padding:15px 0;
+    background-color: #fff;
+    margin: 0 20px 5px;
+    border: none;
+    width: 550px;
+    padding-left: 10px;
+  }
+  .todo-list {
+    list-style: none;
+    padding:15px 0;
+    background-color: #fff;
+    margin: 0 20px;
+  }
+  
+  .todo-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  
+  .todo-item.completed span {
+    text-decoration: line-through;
+    color: #d9d9d9;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    margin: 0 20px;
+  }
+  
+  .filters button {
+    margin: 0 5px;
+  }
+
+  /* Скрываем стандартный чекбокс */
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+  }
+  
+  /* Стилизуем кастомный чекбокс */
+  .custom-checkbox {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  /* Круглый кастомный чекбокс */
+  .custom-checkbox .checkmark {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #73bfae; /* Цвет границы */
+    display: inline-block;
+    position: relative;
+    transition: background-color 0.3s;
+  }
+  
+  /* Состояние, когда чекбокс выбран */
+  .custom-checkbox input[type="checkbox"]:checked + .checkmark {
+    background-color: #fff; /* Цвет заливки при checked */
+  }
+  
+  /* Галочка внутри чекбокса */
+  .custom-checkbox .checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 5px;
+    top: 2px;
+    width: 6px;
+    height: 10px;
+    border: solid #73bfae;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  /* Отображаем галочку при checked */
+  .custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+    display: block;
+  }
+  
+  /* Стили для текста выполненных задач */
+  .todo-text.completed {
+    text-decoration: line-through;
+    color: grey;
+  }
